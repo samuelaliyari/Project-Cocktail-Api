@@ -1,12 +1,17 @@
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Data } from "../data/Data";
 import GalleryItem from "./GalleryItem";
-import { useParams } from "react-router-dom";
+import { useParams, useLocation } from "react-router-dom";
+import SearchBar from "./SearchBar";
 
 const Gallery = () => {
 	const { data, setData } = useContext(Data);
+	const [filterData, setFilterdata] = useState([]);
+	const [allData, setAllData] = useState([]);
 	const category = useParams().category;
-	const allData = data;
+	const location = useLocation();
+	const state = location.state;
+	console.log(state);
 	const Gin = data.filter((cocktail) => {
 		if (
 			cocktail.strIngredient1 === "Gin" ||
@@ -56,72 +61,60 @@ const Gallery = () => {
 			return cocktail;
 		}
 	});
+	useEffect(() => {
+		state === null && category === "alldata"
+			? setAllData(data)
+			: setAllData(state);
+		if (category === "alldata") {
+			setAllData(data);
+			setFilterdata(data);
+		}
+		if (category === "gin") {
+			setAllData(Gin);
+			setFilterdata(Gin);
+		}
+		if (category === "vodka") {
+			setAllData(Vodka);
+			setFilterdata(Vodka);
+		}
+		if (category === "rum") {
+			setAllData(Rum);
+			setFilterdata(Rum);
+		}
+		if (category === "scotch") {
+			setAllData(Scotch);
+			setFilterdata(Scotch);
+		}
+		if (category === "nonalcoholic") {
+			setAllData(NonAlcoholic);
+			setFilterdata(NonAlcoholic);
+		}
+	}, []);
+	const cocktailFilter = (searchInput) => {
+		const filtered = filterData.filter((cocktail) => {
+			return cocktail.strDrink
+				.toLowerCase()
+				.includes(searchInput.toLowerCase());
+		});
 
-	console.log(NonAlcoholic);
+		setAllData(filtered);
+	};
 
 	return (
 		<section>
 			<h1>Gallery</h1>
-			{category === "alldata"
-				? allData.map((cocktail) => (
-						<GalleryItem
-							key={cocktail.idDrink}
-							id={cocktail.idDrink}
-							name={cocktail.strDrink}
-							image={cocktail.strDrinkThumb}
-						/>
-				  ))
-				: null}
-			{category === "gin"
-				? Gin.map((cocktail) => (
-						<GalleryItem
-							key={cocktail.idDrink}
-							id={cocktail.idDrink}
-							name={cocktail.strDrink}
-							image={cocktail.strDrinkThumb}
-						/>
-				  ))
-				: null}
-			{category === "vodka"
-				? Vodka.map((cocktail) => (
-						<GalleryItem
-							key={cocktail.idDrink}
-							id={cocktail.idDrink}
-							name={cocktail.strDrink}
-							image={cocktail.strDrinkThumb}
-						/>
-				  ))
-				: null}
-			{category === "rum"
-				? Rum.map((cocktail) => (
-						<GalleryItem
-							key={cocktail.idDrink}
-							id={cocktail.idDrink}
-							name={cocktail.strDrink}
-							image={cocktail.strDrinkThumb}
-						/>
-				  ))
-				: null}
-			{category === "scotch"
-				? Scotch.map((cocktail) => (
-						<GalleryItem
-							key={cocktail.idDrink}
-							id={cocktail.idDrink}
-							name={cocktail.strDrink}
-							image={cocktail.strDrinkThumb}
-						/>
-				  ))
-				: null}
-			{category === "nonalcoholic"
-				? NonAlcoholic.map((cocktail) => (
-						<GalleryItem
-							key={cocktail.idDrink}
-							id={cocktail.idDrink}
-							name={cocktail.strDrink}
-							image={cocktail.strDrinkThumb}
-						/>
-				  ))
-				: null}
+			<SearchBar
+				searchFunc={cocktailFilter}
+				btnShow={false}
+			/>
+			{allData.map((cocktail) => (
+				<GalleryItem
+					key={cocktail.idDrink}
+					id={cocktail.idDrink}
+					name={cocktail.strDrink}
+					image={cocktail.strDrinkThumb}
+				/>
+			))}
 		</section>
 	);
 };

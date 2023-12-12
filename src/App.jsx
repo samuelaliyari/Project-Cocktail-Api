@@ -15,6 +15,7 @@ function App() {
 	// Setter and getter for Data
 	const [data, setData] = useState(allCocktails);
 	console.log(data);
+
 	return (
 		<>
 			<Data.Provider value={{ data, setData }}>
