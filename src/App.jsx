@@ -16,24 +16,33 @@ function App() {
 		setDarkMode(!darkMode);
 	};
 
+	const [data, setData] = useState(allCocktails);
+	console.log(data);
+
 	return (
-		<section className={darkMode ? "darkMode" : "lightMode"}>
-			<Header
-				onClick={changeMode}
-				darkMode={darkMode}
-			/>
-			<Routes>
-				<Route
-					path='/'
-					element={<Home />}
+		<Data.Provider value={{ data, setData }}>
+			<section className={darkMode ? "darkMode" : "lightMode"}>
+				<Header
+					onClick={changeMode}
+					darkMode={darkMode}
 				/>
-				<Route
-					path='/detail/:id'
-					element={<Detail />}
-				/>
-			</Routes>
-			<Footer />
-		</section>
+				<Routes>
+					<Route
+						path='/'
+						element={<Home />}
+					/>
+					<Route
+						path='/detail/:id'
+						element={<Detail />}
+					/>
+					<Route
+						path='/gallery/:category'
+						element={<Gallery />}
+					/>
+				</Routes>
+				<Footer />
+			</section>
+		</Data.Provider>
 	);
 }
 

@@ -62,9 +62,10 @@ const Gallery = () => {
 		}
 	});
 	useEffect(() => {
-		state === null && category === "alldata"
-			? setAllData(data)
-			: setAllData(state);
+		if (category === "searchresult") {
+			setAllData(state);
+			setFilterdata(state);
+		}
 		if (category === "alldata") {
 			setAllData(data);
 			setFilterdata(data);

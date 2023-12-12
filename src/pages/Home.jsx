@@ -1,12 +1,12 @@
 import { Link, useNavigate } from "react-router-dom";
-import { Data } from "../data/Data";
 import { useContext, useEffect, useState } from "react";
 import SearchBar from "../components/SearchBar";
+import { Data } from "../data/Data";
 
 const Home = () => {
 	const navigate = useNavigate();
 	const { data, setData } = useContext(Data);
-	const [filteredCocktails, setFilteredCocktails] = useState("");
+	console.log(data);
 	const cocktailFilter = (searchInput) => {
 		const filtered = data.filter((cocktail) => {
 			return cocktail.strDrink
