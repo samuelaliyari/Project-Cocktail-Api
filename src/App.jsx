@@ -1,5 +1,5 @@
 import { useContext, useEffect, useState } from "react";
-import "./App.css";
+import "./App.scss";
 import { Data } from "./data/Data";
 import Home from "./pages/Home";
 import { Route, Routes } from "react-router-dom";
@@ -11,33 +11,29 @@ import Gallery from "./components/Gallery";
 function App() {
 	// import all data and log in the Console
 	const allCocktails = useContext(Data);
-
-	// Setter and getter for Data
-	const [data, setData] = useState(allCocktails);
-	console.log(data);
+	const [darkMode, setDarkMode] = useState(true);
+	const changeMode = () => {
+		setDarkMode(!darkMode);
+	};
 
 	return (
-		<>
-			<Data.Provider value={{ data, setData }}>
-				<Header />
-				<Routes>
-					<Route
-						path='/'
-						element={<Home />}
-					/>
-					<Route
-						path='/detail/:id'
-						element={<Detail />}
-					/>
-
-					<Route
-						path='/gallery/:category'
-						element={<Gallery />}
-					/>
-				</Routes>
-				<Footer />
-			</Data.Provider>
-		</>
+		<section className={darkMode ? "darkMode" : "lightMode"}>
+			<Header
+				onClick={changeMode}
+				darkMode={darkMode}
+			/>
+			<Routes>
+				<Route
+					path='/'
+					element={<Home />}
+				/>
+				<Route
+					path='/detail/:id'
+					element={<Detail />}
+				/>
+			</Routes>
+			<Footer />
+		</section>
 	);
 }
 
