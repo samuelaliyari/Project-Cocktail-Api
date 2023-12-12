@@ -6,7 +6,7 @@ import SearchBar from "../components/SearchBar";
 const Home = () => {
 	const navigate = useNavigate()
 	const { data, setData } = useContext(Data);
-	const [filteredCocktails, setFilteredCocktails] = useState('')
+	
 	const cocktailFilter = (searchInput) =>{
 		const filtered = data.filter((cocktail)=>{
 			return cocktail.strDrink.toLowerCase().includes(searchInput.toLowerCase())
