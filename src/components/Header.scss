@@ -1,0 +1,38 @@
+.header {
+  padding-top: 1rem;
+  padding-bottom: 8rem;
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+    padding-inline: 1.5rem;
+    h2 {
+      font-family: "Playfair Display";
+      letter-spacing: 4px;
+    }
+    div {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+      p {
+        font-family: "Montserrat";
+      }
+      img {
+        width: 24px;
+        height: 24px;
+      }
+    }
+  }
+  article {
+    margin-top: 8rem;
+    padding-inline: 3rem;
+    h1 {
+      font-family: "Playfair Display";
+      font-size: 3.25rem;
+    }
+    p {
+      font-family: "Montserrat";
+    }
+  }
+}
