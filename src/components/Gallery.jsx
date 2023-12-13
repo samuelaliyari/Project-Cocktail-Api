@@ -3,6 +3,7 @@ import { Data } from "../data/Data";
 import GalleryItem from "./GalleryItem";
 import { useParams, useLocation } from "react-router-dom";
 import SearchBar from "./SearchBar";
+import "./Gallery.scss";
 
 const Gallery = () => {
 	const { data, setData } = useContext(Data);
@@ -23,6 +24,7 @@ const Gallery = () => {
 			return cocktail;
 		}
 	});
+
 	const Vodka = data.filter((cocktail) => {
 		if (
 			cocktail.strIngredient1 === "Vodka" ||
@@ -102,20 +104,23 @@ const Gallery = () => {
 	};
 
 	return (
-		<section>
-			<h1>Gallery</h1>
+		<section className='galleryWrapper'>
 			<SearchBar
 				searchFunc={cocktailFilter}
 				btnShow={false}
 			/>
-			{allData.map((cocktail) => (
-				<GalleryItem
-					key={cocktail.idDrink}
-					id={cocktail.idDrink}
-					name={cocktail.strDrink}
-					image={cocktail.strDrinkThumb}
-				/>
-			))}
+			<section>
+				<div className='gallery'>
+					{allData.map((cocktail) => (
+						<GalleryItem
+							key={cocktail.idDrink}
+							id={cocktail.idDrink}
+							name={cocktail.strDrink}
+							image={cocktail.strDrinkThumb}
+						/>
+					))}
+				</div>
+			</section>
 		</section>
 	);
 };

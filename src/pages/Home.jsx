@@ -18,7 +18,6 @@ const Home = () => {
 	};
 	return (
 		<main>
-			<h1>Home</h1>
 			<SearchBar
 				searchFunc={cocktailFilter}
 				btnShow={true}

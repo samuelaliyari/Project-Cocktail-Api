@@ -1,3 +1,4 @@
+import "./SearchBar.scss";
 import { useState } from "react";
 
 const SearchBar = ({ searchFunc, btnShow }) => {
