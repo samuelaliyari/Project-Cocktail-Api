@@ -104,6 +104,11 @@ const Gallery = () => {
 	};
 
 	return (
+
+
+
+		
+			
 		<section className='galleryWrapper'>
 			<SearchBar
 				searchFunc={cocktailFilter}
@@ -111,14 +116,17 @@ const Gallery = () => {
 			/>
 			<section>
 				<div className='gallery'>
-					{allData.map((cocktail) => (
+					{allData.length < 1 ? (<h1>Nothing was found!</h1>):(allData.map((cocktail) => (
 						<GalleryItem
 							key={cocktail.idDrink}
 							id={cocktail.idDrink}
 							name={cocktail.strDrink}
 							image={cocktail.strDrinkThumb}
 						/>
-					))}
+
+				  )))
+				  
+				}
 				</div>
 			</section>
 		</section>
