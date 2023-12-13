@@ -21,18 +21,17 @@ function App() {
   console.log(data);
 
   return (
-    <Data.Provider value={{ data, setData }}>
-      <section className={darkMode ? "darkMode" : "lightMode"}>
+    <section className={darkMode ? "darkMode" : "lightMode"}>
+      <Data.Provider value={{ data, setData }}>
         <Header onClick={changeMode} darkMode={darkMode} />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/detail/:id" element={<Detail />} />
           <Route path="/gallery/:category" element={<Gallery />} />
-          <Route path="/newdrink" element={<NewDrink />} />
         </Routes>
         <Footer />
-      </section>
-    </Data.Provider>
+      </Data.Provider>
+    </section>
   );
 }
 

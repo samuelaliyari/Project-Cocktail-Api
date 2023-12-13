@@ -1,50 +1,38 @@
 .header {
   padding-top: 1rem;
   padding-bottom: 8rem;
+  background-color: rgba(var(--background));
   nav {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
     font-size: 13px;
     padding-inline: 1.5rem;
-    h2 {
-      font-family: "Playfair Display";
-      letter-spacing: 4px;
+    position: fixed;
+    padding: 1rem;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.195);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgb(var(--headline));
+
+    img {
+      width: 100px;
+      height: auto;
     }
     div {
       display: flex;
-      align-items: flex-start;
-      .menu {
-        display: flex;
-        flex-direction: column;
-        button {
-          background-color: inherit;
-          padding: 0.25rem 0 0.25rem 1rem;
-          border: none;
-          font-family: "Montserrat";
-          cursor: pointer;
-        }
-        ul {
-          visibility: hidden;
-          a {
-            text-decoration: none;
-          }
-          li {
-            margin-top: 0.25rem;
-            list-style: none;
-            font-family: "Montserrat";
-            padding-left: 1rem;
-          }
-        }
-        .activ {
-          visibility: visible;
-        }
+      gap: 2rem;
+      align-items: center;
+      p {
+        font-family: "Montserrat";
+        color: rgb(var(--text-color));
       }
       img {
-        margin-left: 3rem;
         width: 24px;
         height: 24px;
-        cursor: pointer;
       }
     }
   }
@@ -54,9 +42,14 @@
     h1 {
       font-family: "Playfair Display";
       font-size: 3.25rem;
+      color: rgb(var(--headline));
+      font-family: Dream;
+      font-weight: normal;
     }
     p {
       font-family: "Montserrat";
+      color: rgb(var(--text-color));
+      font-family: Poppins;
     }
   }
 }

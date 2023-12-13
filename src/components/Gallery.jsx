@@ -3,15 +3,16 @@ import { Data } from "../data/Data";
 import GalleryItem from "./GalleryItem";
 import { useParams, useLocation } from "react-router-dom";
 import SearchBar from "./SearchBar";
+import "./Gallery.scss";
 
 const Gallery = () => {
 	const { data, setData } = useContext(Data);
-	const [filterData, setFilterdata] = useState([])
-	const [allData, setAllData] = useState([])
+	const [filterData, setFilterdata] = useState([]);
+	const [allData, setAllData] = useState([]);
 	const category = useParams().category;
-	const location = useLocation()
-	const state = location.state
-	console.log(state)
+	const location = useLocation();
+	const state = location.state;
+	console.log(state);
 	const Gin = data.filter((cocktail) => {
 		if (
 			cocktail.strIngredient1 === "Gin" ||
@@ -23,6 +24,7 @@ const Gallery = () => {
 			return cocktail;
 		}
 	});
+
 	const Vodka = data.filter((cocktail) => {
 		if (
 			cocktail.strIngredient1 === "Vodka" ||
@@ -61,60 +63,72 @@ const Gallery = () => {
 			return cocktail;
 		}
 	});
-	useEffect(() =>{
-		
-		if(category === "searchresult"){
-            setAllData(state)
-			setFilterdata(state)
+	useEffect(() => {
+		if (category === "searchresult") {
+			setAllData(state);
+			setFilterdata(state);
 		}
-		if(category === "alldata"){
-            setAllData(data)
-			setFilterdata(data)
+		if (category === "alldata") {
+			setAllData(data);
+			setFilterdata(data);
 		}
-        if(category === "gin"){
-            setAllData(Gin)
-			setFilterdata(Gin)
+		if (category === "gin") {
+			setAllData(Gin);
+			setFilterdata(Gin);
 		}
-        if(category === "vodka"){
-            setAllData(Vodka)
-			setFilterdata(Vodka)
+		if (category === "vodka") {
+			setAllData(Vodka);
+			setFilterdata(Vodka);
 		}
-        if(category === "rum"){
-            setAllData(Rum)
-			setFilterdata(Rum)
+		if (category === "rum") {
+			setAllData(Rum);
+			setFilterdata(Rum);
 		}
-        if(category === "scotch"){
-            setAllData(Scotch)
-			setFilterdata(Scotch)
+		if (category === "scotch") {
+			setAllData(Scotch);
+			setFilterdata(Scotch);
 		}
-        if(category === "nonalcoholic"){
-            setAllData(NonAlcoholic)
-			setFilterdata(NonAlcoholic)
+		if (category === "nonalcoholic") {
+			setAllData(NonAlcoholic);
+			setFilterdata(NonAlcoholic);
 		}
-	},[])
-	const cocktailFilter = (searchInput) =>{
-		
-		const filtered = filterData.filter((cocktail)=>{
-			return cocktail.strDrink.toLowerCase().includes(searchInput.toLowerCase())
-		})
-		
-		setAllData(filtered)
-	}
+	}, []);
+	const cocktailFilter = (searchInput) => {
+		const filtered = filterData.filter((cocktail) => {
+			return cocktail.strDrink
+				.toLowerCase()
+				.includes(searchInput.toLowerCase());
+		});
+
+		setAllData(filtered);
+	};
 
 	return (
-		<section>
-			<h1>Gallery</h1>
-			<SearchBar searchFunc={cocktailFilter} btnShow={false}/>
-			{
-				 allData.map((cocktail) => (
+
+
+
+		
+			
+		<section className='galleryWrapper'>
+			<SearchBar
+				searchFunc={cocktailFilter}
+				btnShow={false}
+			/>
+			<section>
+				<div className='gallery'>
+					{allData.length < 1 ? (<h1>Nothing was found!</h1>):(allData.map((cocktail) => (
 						<GalleryItem
 							key={cocktail.idDrink}
 							id={cocktail.idDrink}
 							name={cocktail.strDrink}
 							image={cocktail.strDrinkThumb}
 						/>
-				  ))
+
+				  )))
+				  
 				}
+				</div>
+			</section>
 		</section>
 	);
 };

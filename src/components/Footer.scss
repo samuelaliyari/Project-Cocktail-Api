@@ -1,11 +1,17 @@
 .footer {
-  padding: 5rem 3rem 7.5rem 3rem;
-  h3 {
-    font-family: "Playfair Display";
-    font-size: 1.75rem;
-  }
-  p {
-    font-family: "Montserrat";
-    margin-top: 3rem;
-  }
+	padding: 5rem 3rem 7.5rem 3rem;
+	background-color: rgb(var(--background));
+	h3 {
+		font-family: "Playfair Display";
+		font-size: 1.75rem;
+		color: rgb(var(--headline));
+		font-family: Dream;
+		font-weight: normal;
+	}
+	p {
+		font-family: "Montserrat";
+		margin-top: 3rem;
+		color: rgb(var(--text-color));
+		font-family: Poppins;
+	}
 }

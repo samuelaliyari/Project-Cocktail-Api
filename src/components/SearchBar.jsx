@@ -1,4 +1,6 @@
+
 import { useState } from "react"
+import './SearchBar.scss'
 
 const SearchBar = ({searchFunc, btnShow }) => {
     const [searchInput, setSearchInput] = useState('')
@@ -13,18 +15,18 @@ const SearchBar = ({searchFunc, btnShow }) => {
     const searchCheck = () =>{
         searchFunc(searchInput)
     } 
-    const bothFunc =()=>{
-        searchFunc(searchInput);
-        handleInput();
-    }
+    
     console.log(searchInput)
     return ( 
-        <div>
-            {btnShow ? (<input type="text"  placeholder="search..." value={searchInput} onChange={handleInput}/>): (<input type="text"  placeholder="search..." value={searchInput} onChange={handleInputTwo}/>)}
+        <div className="searchbardiv">
+            {btnShow ? (<input type="text"  placeholder="search..." value={searchInput} onChange={handleInput} onKeyDown={(e) => {
+        if (e.key === "Enter")
+            searchCheck();}}/>): (<input type="text"  placeholder="search..." value={searchInput} onChange={handleInputTwo} />)}
             
-        {btnShow ? (<button onClick={searchCheck}>Search</button>): null}
+        
         </div>
      );
 }
  
 export default SearchBar;
+
