@@ -52,7 +52,7 @@
 	div {
 		position: relative;
 		article {
-			background-color: rgba(0, 0, 0, 0.431);
+			background-color: rgba(0, 0, 0, 0.76);
 			width: 30vw;
 			height: 55vh;
 			aspect-ratio: 1/1;
@@ -76,8 +76,8 @@
 				padding-left: 5%;
 				transition: all 400ms linear;
 				&:hover {
-					color: rgb(var(--text-color));
-					border-bottom: 1px solid rgb(var(--text-color));
+					color: rgb(255, 235, 205);
+					border-bottom: 1px solid rgb(255, 235, 205);
 					transform: scale(1.05);
 				}
 			}

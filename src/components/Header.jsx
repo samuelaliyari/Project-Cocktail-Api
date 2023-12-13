@@ -45,7 +45,7 @@ const Header = (props) => {
 						Choose a Category <span>˘</span>
 					</h4>
 					<Link to='/gallery/gin'>Gin</Link>
-					<Link to='/gallery/gin'>Vodka</Link>
+					<Link to='/gallery/vodka'>Vodka</Link>
 					<Link to='/gallery/rum'>Rum</Link>
 					<Link to='/gallery/scotch'>Scotch</Link>
 					<Link to='/gallery/nonalcoholic'>Alkoholfrei</Link>
@@ -57,23 +57,3 @@ const Header = (props) => {
 };
 
 export default Header;
-
-{
-	/* <div className='menu'>
-	<ul>
-		<Link>
-			<li>All Drinks</li>
-		</Link>
-		<li>
-			Cocktails mit:
-				<Link>Gin</Link>
-				<Link>Vodka</Link>
-				<Link>Rum</Link>
-				<Link>Scotch</Link>
-				<Link>Alkoholfrei</Link>
-				<Link>Zufall</Link>
-			</div>
-		</li>
-	</ul>
-</div>; */
-}
