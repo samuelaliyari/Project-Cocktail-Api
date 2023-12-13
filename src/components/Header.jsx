@@ -1,6 +1,8 @@
 import "./Header.scss";
 import moon from "../images/moon.png";
 import sun from "../images/sun.png";
+import logodark from "../images/logodark.png";
+import logolight from "../images/logolight.png";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 
@@ -10,7 +12,7 @@ const Header = (props) => {
   return (
     <header className="header">
       <nav>
-        <h2>Drinks&Chill</h2>
+        <img src={props.darkMode ? logolight : logodark} alt="" />
         <div>
           <div className="menu">
             <p onClick={() => setActiv(!activ)}>MENU</p>

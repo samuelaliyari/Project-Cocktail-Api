@@ -1,12 +1,10 @@
 .header {
-  padding-top: 1rem;
-  padding-bottom: 8rem;
+  padding: 5% 7%;
   background-color: rgba(var(--background));
   color: rgba(var(--text-color));
   nav {
     height: 8vh;
     display: flex;
-
     justify-content: space-between;
     align-items: left;
     font-size: 13px;
@@ -20,17 +18,13 @@
     background-color: rgba(0, 0, 0, 0.195);
     backdrop-filter: blur(12px);
     border-bottom: 1px solid rgb(var(--headline));
-    h2 {
-      font-family: "Playfair Display";
-      letter-spacing: 4px;
-    }
+
     img {
       width: 100px;
       height: auto;
     }
     div {
       display: flex;
-
       gap: 2rem;
       align-items: baseline;
       .menu {
@@ -38,11 +32,9 @@
         flex-direction: column;
         gap: 0.5rem;
         p {
-          border: none;
           font-family: "Montserrat";
+          color: rgb(var(--text-color));
           cursor: pointer;
-          text-align: left;
-          color: rgba(var(--text-color));
         }
         ul {
           visibility: hidden;
