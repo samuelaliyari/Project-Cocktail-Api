@@ -105,15 +105,15 @@ const Gallery = () => {
 		<section>
 			<h1>Gallery</h1>
 			<SearchBar searchFunc={cocktailFilter} btnShow={false}/>
-			{
-				 allData.map((cocktail) => (
+			{allData.length < 1 ? (<h1>Nothing was found!</h1>):(allData.map((cocktail) => (
 						<GalleryItem
 							key={cocktail.idDrink}
 							id={cocktail.idDrink}
 							name={cocktail.strDrink}
 							image={cocktail.strDrinkThumb}
 						/>
-				  ))
+				  )))
+				  
 				}
 		</section>
 	);

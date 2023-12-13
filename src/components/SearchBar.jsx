@@ -13,10 +13,7 @@ const SearchBar = ({searchFunc, btnShow }) => {
     const searchCheck = () =>{
         searchFunc(searchInput)
     } 
-    const bothFunc =()=>{
-        searchFunc(searchInput);
-        handleInput();
-    }
+    
     console.log(searchInput)
     return ( 
         <div>
