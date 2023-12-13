@@ -13,7 +13,7 @@ const Header = (props) => {
         <h2>Drinks&Chill</h2>
         <div>
           <div className="menu">
-            <button onClick={() => setActiv(!activ)}>MENU</button>
+            <p onClick={() => setActiv(!activ)}>MENU</p>
             <ul className={activ ? "activ" : ""}>
               <Link to="/newdrink">
                 <li>Add a new Drink</li>
