@@ -1,28 +1,27 @@
 import { useContext, useEffect, useState } from "react";
 import { Data } from "../data/Data";
 
-const GalleryItem = ({ id, name, image }) => {
-	const { data, setdata } = useContext(Data);
+const GalleryItem = ({
+  id,
+  name,
+  image,
+  itemData,
+  setItemData,
+  onOpenModal,
+}) => {
+  const { data, setdata } = useContext(Data);
+  const showItemData = () => {
+    setItemData(data.filter((cocktail) => cocktail.idDrink === id));
 
-	const [itemData, setItemData] = useState([]);
-	const showItemData = () => {
-		setItemData(data.filter((cocktail) => cocktail.idDrink === id));
-	};
-	useEffect(() => {
-		if (itemData.length !== 0) {
-			console.log(itemData);
-		}
-	}, [itemData]);
+    onOpenModal();
+  };
 
-	return (
-		<article onClick={showItemData}>
-			<h2>{name}</h2>
-			<img
-				src={image}
-				alt={`Photo of ${name}`}
-			/>
-		</article>
-	);
+  return (
+    <article onClick={showItemData}>
+      <h2>{name}</h2>
+      <img src={image} alt={`Photo of ${name}`} />
+    </article>
+  );
 };
 
 export default GalleryItem;
