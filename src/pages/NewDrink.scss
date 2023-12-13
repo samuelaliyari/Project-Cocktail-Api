@@ -1,0 +1,10 @@
+.newDrinkPage {
+  h3 {
+    color: rgba(var(--text-color));
+    margin-bottom: 1rem;
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}
