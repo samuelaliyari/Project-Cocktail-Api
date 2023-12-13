@@ -1,5 +1,6 @@
 import { useContext, useEffect, useState } from "react";
 import { Data } from "../data/Data";
+import "./GalleryItem.scss";
 
 const GalleryItem = ({ id, name, image }) => {
 	const { data, setdata } = useContext(Data);
@@ -15,7 +16,9 @@ const GalleryItem = ({ id, name, image }) => {
 	}, [itemData]);
 
 	return (
-		<article onClick={showItemData}>
+		<article
+			className='galleryItem'
+			onClick={showItemData}>
 			<h2>{name}</h2>
 			<img
 				src={image}
