@@ -1,3 +1,4 @@
+
 import { useState } from "react"
 import './SearchBar.scss'
 
@@ -28,3 +29,4 @@ const SearchBar = ({searchFunc, btnShow }) => {
 }
  
 export default SearchBar;
+
