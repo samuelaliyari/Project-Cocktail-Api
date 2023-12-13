@@ -20,27 +20,28 @@ const Header = (props) => {
               <Link>
                 <li>All Drinks</li>
               </Link>
-
-              <li className="cocktailsCategory">
+              <li>
                 Cocktails mit:
-                <Link>
-                  <li>Gin</li>
-                </Link>
-                <Link>
-                  <li>Vodka</li>
-                </Link>
-                <Link>
-                  <li>Rum</li>
-                </Link>
-                <Link>
-                  <li>Scotch</li>
-                </Link>
-                <Link>
-                  <li>Alkoholfrei</li>
-                </Link>
-                <Link>
-                  <li>Zufall</li>
-                </Link>
+                <ul className={activ ? "activ" : ""}>
+                  <Link>
+                    <li>Gin</li>
+                  </Link>
+                  <Link>
+                    <li>Vodka</li>
+                  </Link>
+                  <Link>
+                    <li>Rum</li>
+                  </Link>
+                  <Link>
+                    <li>Scotch</li>
+                  </Link>
+                  <Link>
+                    <li>Alkoholfrei</li>
+                  </Link>
+                  <Link>
+                    <li>Zufall</li>
+                  </Link>
+                </ul>
               </li>
             </ul>
           </div>
