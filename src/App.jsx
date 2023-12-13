@@ -7,6 +7,7 @@ import Detail from "./pages/Detail";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Gallery from "./components/Gallery";
+import NewDrink from "./pages/NewDrink";
 
 function App() {
   // import all data and log in the Console
@@ -27,6 +28,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/detail/:id" element={<Detail />} />
           <Route path="/gallery/:category" element={<Gallery />} />
+          <Route path="/newdrink" element={<NewDrink />} />
         </Routes>
         <Footer />
       </section>

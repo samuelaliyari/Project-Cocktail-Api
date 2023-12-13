@@ -4,7 +4,7 @@
   nav {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     font-size: 13px;
     padding-inline: 1.5rem;
     h2 {
@@ -13,14 +13,38 @@
     }
     div {
       display: flex;
-      gap: 2rem;
-      align-items: center;
-      p {
-        font-family: "Montserrat";
+      align-items: flex-start;
+      .menu {
+        display: flex;
+        flex-direction: column;
+        button {
+          background-color: inherit;
+          padding: 0.25rem 0 0.25rem 1rem;
+          border: none;
+          font-family: "Montserrat";
+          cursor: pointer;
+        }
+        ul {
+          visibility: hidden;
+          a {
+            text-decoration: none;
+          }
+          li {
+            margin-top: 0.25rem;
+            list-style: none;
+            font-family: "Montserrat";
+            padding-left: 1rem;
+          }
+        }
+        .activ {
+          visibility: visible;
+        }
       }
       img {
+        margin-left: 3rem;
         width: 24px;
         height: 24px;
+        cursor: pointer;
       }
     }
   }
