@@ -123,21 +123,23 @@ const Gallery = () => {
   const myRef = React.useRef(null);
 
   return (
-    <section>
-      <h1>Gallery</h1>
-
+    <section className="galleryWrapper">
       <SearchBar searchFunc={cocktailFilter} btnShow={false} />
-      {allData.map((cocktail) => (
-        <GalleryItem
-          onOpenModal={onOpenModal}
-          key={cocktail.idDrink}
-          id={cocktail.idDrink}
-          name={cocktail.strDrink}
-          image={cocktail.strDrinkThumb}
-          itemData={itemData}
-          setItemData={setItemData}
-        />
-      ))}
+      <section>
+        <div className="gallery">
+          {allData.map((cocktail) => (
+            <GalleryItem
+              onOpenModal={onOpenModal}
+              key={cocktail.idDrink}
+              id={cocktail.idDrink}
+              name={cocktail.strDrink}
+              image={cocktail.strDrinkThumb}
+              itemData={itemData}
+              setItemData={setItemData}
+            />
+          ))}
+        </div>
+      </section>
       <section>
         <div ref={myRef} />
         <Modal
