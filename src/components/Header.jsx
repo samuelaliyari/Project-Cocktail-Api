@@ -46,6 +46,7 @@ const Header = (props) => {
               </li>
             </ul>
           </div>
+
           <img onClick={props.onClick} src={props.darkMode ? sun : moon} />
         </div>
       </nav>

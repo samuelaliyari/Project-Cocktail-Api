@@ -4,7 +4,9 @@
   background-color: rgba(var(--background));
   color: rgba(var(--text-color));
   nav {
+    height: 8vh;
     display: flex;
+
     justify-content: space-between;
     align-items: left;
     font-size: 13px;
@@ -28,8 +30,9 @@
     }
     div {
       display: flex;
+
       gap: 2rem;
-      align-items: left;
+      align-items: baseline;
       .menu {
         display: flex;
         flex-direction: column;

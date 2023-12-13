@@ -1,3 +1,13 @@
+@font-face {
+  font-family: "Dream";
+  src: url(./../fonts/Dream-Avenue.ttf);
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url(./../fonts/Poppins-Regular.ttf);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -31,4 +41,13 @@ html {
   --headline: 255, 127, 80;
   --brightness: 80%;
   --bg: url(../../public/bgLight.jpg);
+}
+
+.customOverlay {
+  background: rgba(36, 123, 160, 0.7);
+}
+.customModal {
+  background: #b2dbbf;
+  max-width: 500px;
+  width: 100%;
 }

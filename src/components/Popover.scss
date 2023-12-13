@@ -8,27 +8,47 @@
   src: url(./../fonts/Poppins-Regular.ttf);
 }
 
-.details {
+.modal {
+  background-color: green;
+  padding: 0px;
+  border-radius: 1rem;
+  margin: 0px;
+  max-width: 1200px;
+}
+
+.modal-container {
+  padding: 0;
+  background-color: #1d1d1db4;
+  backdrop-filter: blur(2px);
+}
+
+.popover {
+  width: 100%;
   background-color: #1d1d1d;
-  color: #ffebcd;
+  color: blanchedalmond;
   display: grid;
+  margin: 0;
+  padding: 0;
   grid-template-columns: repeat(2, 1fr);
+  align-items: center;
 
   img {
-    width: 50vw;
-    height: 100vh;
-    object-fit: cover;
+    margin: 64px auto;
+    width: 70%;
+    border-radius: 50%;
+    border: 2px solid #ff7f50;
+    border-left: 8px solid #ff7f50;
   }
 
   .drink-info-wrapper {
-    padding: 64px;
+    padding: 64px 64px 64px 0;
     display: flex;
     gap: 32px;
     flex-direction: column;
 
     h2 {
       font-family: "Dream";
-      font-size: 6rem;
+      font-size: 4rem;
       padding: 20px 0;
       margin: 0;
       font-weight: normal;
@@ -80,6 +100,21 @@
       margin: 0;
     }
   }
+}
+
+.link-button {
+  text-align: right;
+}
+
+.primary-button {
+  background-color: #ff7f50;
+  border-radius: 50px;
+  padding: 16px 32px;
+  border: none;
+  color: #1d1d1d;
+  font-family: "Poppins";
+  font-size: 1rem;
+  font-weight: bold;
 }
 
 @media screen and (max-width: 850px) {
