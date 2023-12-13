@@ -10,29 +10,41 @@ import Gallery from "./components/Gallery";
 import "react-responsive-modal/styles.css";
 
 function App() {
-  // import all data and log in the Console
-  const allCocktails = useContext(Data);
-  const [darkMode, setDarkMode] = useState(true);
-  const changeMode = () => {
-    setDarkMode(!darkMode);
-  };
+	// import all data and log in the Console
+	const allCocktails = useContext(Data);
+	const [darkMode, setDarkMode] = useState(true);
+	const changeMode = () => {
+		setDarkMode(!darkMode);
+	};
 
-  const [data, setData] = useState(allCocktails);
-  console.log(data);
+	const [data, setData] = useState(allCocktails);
+	console.log(data);
 
-  return (
-    <Data.Provider value={{ data, setData }}>
-      <section className={darkMode ? "darkMode" : "lightMode"}>
-        <Header onClick={changeMode} darkMode={darkMode} />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/detail/:id" element={<Detail />} />
-          <Route path="/gallery/:category" element={<Gallery />} />
-        </Routes>
-        <Footer />
-      </section>
-    </Data.Provider>
-  );
+	return (
+		<section className={darkMode ? "darkMode" : "lightMode"}>
+			<Data.Provider value={{ data, setData }}>
+				<Header
+					onClick={changeMode}
+					darkMode={darkMode}
+				/>
+				<Routes>
+					<Route
+						path='/'
+						element={<Home />}
+					/>
+					<Route
+						path='/detail/:id'
+						element={<Detail />}
+					/>
+					<Route
+						path='/gallery/:category'
+						element={<Gallery />}
+					/>
+				</Routes>
+				<Footer />
+			</Data.Provider>
+		</section>
+	);
 }
 
 export default App;

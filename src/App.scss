@@ -9,28 +9,38 @@
 }
 
 * {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+img {
+	display: block;
+}
+
 :root {
-  --darkBlue: #262b46;
-  --lightGray: #f0f0f0;
+	--background: 29, 29, 29;
+	--headline: 255, 126, 79;
+	--text-color: 255, 235, 205;
+	--brightness: 80%;
+	--bg: url(../../public/bgDark.jpg);
 }
-.darkMode {
-  .header,
-  .footer {
-    background-color: var(--darkBlue);
-    color: var(--lightGray);
-  }
+
+html {
+	background-color: rgb(29, 29, 29);
 }
 
 .lightMode {
-  .header,
-  .footer {
-    background-color: var(--lightGray);
-    color: var(--darkBlue);
-  }
+	--background: 255, 235, 205;
+	--text-color: 29, 29, 29;
+	--headline: 255, 127, 80;
+	--brightness: 80%;
+	--bg: url(../../public/bgLight.jpg);
 }
 
 .customOverlay {

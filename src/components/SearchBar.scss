@@ -1,0 +1,20 @@
+.searchbardiv {
+	width: 100%;
+	display: flex;
+	padding: 3% 7%;
+	input {
+		width: 45vh;
+		font-size: 1.5rem;
+		background: transparent;
+		border: 2px solid rgb(var(--headline));
+		padding: 5px 10px;
+		border-radius: 0.7rem;
+		color: rgba(var(--text-color));
+		&::placeholder {
+			color: rgba(var(--text-color), 0.7);
+		}
+		&:focus {
+			outline: none;
+		}
+	}
+}

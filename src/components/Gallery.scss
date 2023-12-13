@@ -1,0 +1,17 @@
+.galleryWrapper {
+	background-color: rgb(var(--background));
+	section {
+		background: fixed var(--bg) center / cover no-repeat;
+
+		.gallery {
+			background: transparent;
+			backdrop-filter: brightness(var(--brightness));
+			display: grid;
+
+			padding: 6%;
+			grid-template-columns: repeat(auto-fill, minmax(40vw, 1fr));
+			place-items: center;
+			gap: 10vh;
+		}
+	}
+}

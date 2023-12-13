@@ -1,5 +1,6 @@
 import { useContext, useEffect, useState } from "react";
 import { Data } from "../data/Data";
+import "./GalleryItem.scss";
 
 const GalleryItem = ({
   id,
@@ -17,7 +18,7 @@ const GalleryItem = ({
   };
 
   return (
-    <article onClick={showItemData}>
+    <article className="galleryItem" onClick={showItemData}>
       <h2>{name}</h2>
       <img src={image} alt={`Photo of ${name}`} />
     </article>

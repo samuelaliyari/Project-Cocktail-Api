@@ -8,6 +8,7 @@ import { Modal } from "react-responsive-modal";
 import "react-responsive-modal/styles.css";
 import React from "react";
 import "./Popover.scss";
+import "./Gallery.scss";
 
 const Gallery = () => {
   const { data, setData } = useContext(Data);
@@ -230,6 +231,27 @@ const Gallery = () => {
             </div>
           </article>
         </Modal>
+      </section>
+    </section>
+  );
+  return (
+    <section className="galleryWrapper">
+      <SearchBar searchFunc={cocktailFilter} btnShow={false} />
+      <section>
+        <div className="gallery">
+          {allData.length < 1 ? (
+            <h1>Nothing was found!</h1>
+          ) : (
+            allData.map((cocktail) => (
+              <GalleryItem
+                key={cocktail.idDrink}
+                id={cocktail.idDrink}
+                name={cocktail.strDrink}
+                image={cocktail.strDrinkThumb}
+              />
+            ))
+          )}
+        </div>
       </section>
     </section>
   );

@@ -1,38 +1,54 @@
 .header {
-  padding-top: 1rem;
-  padding-bottom: 8rem;
-  nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 13px;
-    padding-inline: 1.5rem;
-    h2 {
-      font-family: "Playfair Display";
-      letter-spacing: 4px;
-    }
-    div {
-      display: flex;
-      gap: 2rem;
-      align-items: center;
-      p {
-        font-family: "Montserrat";
-      }
-      img {
-        width: 24px;
-        height: 24px;
-      }
-    }
-  }
-  article {
-    margin-top: 8rem;
-    padding-inline: 3rem;
-    h1 {
-      font-family: "Playfair Display";
-      font-size: 3.25rem;
-    }
-    p {
-      font-family: "Montserrat";
-    }
-  }
+	padding: 5% 7%;
+	background-color: rgba(var(--background));
+	nav {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		font-size: 1rem;
+		font-weight: 700;
+		position: fixed;
+		padding: 2%;
+		top: 0;
+		right: 0;
+		left: 0;
+		z-index: 2;
+		background-color: rgba(0, 0, 0, 0.195);
+		backdrop-filter: blur(12px);
+		border-bottom: 1px solid rgb(var(--headline));
+
+		img {
+			width: 100px;
+			height: auto;
+		}
+		div {
+			display: flex;
+			gap: 2rem;
+			align-items: center;
+			p {
+				font-family: "Montserrat";
+				color: rgb(var(--text-color));
+			}
+			img {
+				width: 24px;
+				height: 24px;
+			}
+		}
+	}
+	article {
+		margin-top: 8rem;
+
+		h1 {
+			font-family: "Playfair Display";
+			font-size: 5rem;
+			color: rgb(var(--headline));
+			font-family: Dream;
+			font-weight: normal;
+		}
+		p {
+			font-family: "Montserrat";
+			color: rgb(var(--text-color));
+			font-family: Poppins;
+		}
+	}
 }
