@@ -1,15 +1,14 @@
 .header {
-	padding-top: 1rem;
-	padding-bottom: 8rem;
+	padding: 5% 7%;
 	background-color: rgba(var(--background));
 	nav {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		font-size: 13px;
-		padding-inline: 1.5rem;
+		font-size: 1rem;
+		font-weight: 700;
 		position: fixed;
-		padding: 1rem;
+		padding: 2%;
 		top: 0;
 		right: 0;
 		left: 0;
@@ -38,10 +37,10 @@
 	}
 	article {
 		margin-top: 8rem;
-		padding-inline: 3rem;
+
 		h1 {
 			font-family: "Playfair Display";
-			font-size: 3.25rem;
+			font-size: 5rem;
 			color: rgb(var(--headline));
 			font-family: Dream;
 			font-weight: normal;
