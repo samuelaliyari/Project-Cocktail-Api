@@ -2,10 +2,11 @@
   padding-top: 1rem;
   padding-bottom: 8rem;
   background-color: rgba(var(--background));
+  color: rgba(var(--text-color));
   nav {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: left;
     font-size: 13px;
     padding-inline: 1.5rem;
     position: fixed;
@@ -17,7 +18,10 @@
     background-color: rgba(0, 0, 0, 0.195);
     backdrop-filter: blur(12px);
     border-bottom: 1px solid rgb(var(--headline));
-
+    h2 {
+      font-family: "Playfair Display";
+      letter-spacing: 4px;
+    }
     img {
       width: 100px;
       height: auto;
@@ -25,10 +29,39 @@
     div {
       display: flex;
       gap: 2rem;
-      align-items: center;
-      p {
-        font-family: "Montserrat";
-        color: rgb(var(--text-color));
+      align-items: left;
+      .menu {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        button {
+          background-color: inherit;
+          border: none;
+          font-family: "Montserrat";
+          cursor: pointer;
+          text-align: left;
+          color: rgba(var(--text-color));
+        }
+        ul {
+          visibility: hidden;
+          a {
+            text-decoration: none;
+          }
+          li {
+            margin-top: 0.5rem;
+            list-style: none;
+            font-family: "Montserrat";
+
+            ul {
+              li {
+                padding-left: 1rem;
+              }
+            }
+          }
+        }
+      }
+      ul.activ {
+        visibility: visible;
       }
       img {
         width: 24px;

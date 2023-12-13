@@ -2,7 +2,7 @@ import "./NewDrink.scss";
 import NewDrinkForm from "../components/NewDrinkForm";
 const NewDrink = () => {
   return (
-    <section>
+    <section className="newDrinkPage">
       <h3>Füge deine eigenen Getränke hinzu!</h3>
       <NewDrinkForm />
     </section>

@@ -6,6 +6,7 @@ import { useState } from "react";
 
 const Header = (props) => {
   const [activ, setActiv] = useState(false);
+  console.log(activ);
   return (
     <header className="header">
       <nav>
