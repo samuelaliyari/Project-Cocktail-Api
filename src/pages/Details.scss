@@ -1,0 +1,85 @@
+@font-face {
+  font-family: "Dream";
+  src: url(./../fonts/Dream-Avenue.ttf);
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url(./../fonts/Poppins-Regular.ttf);
+}
+
+.details {
+  background-color: rgb(0, 0, 0);
+  color: blanchedalmond;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  img {
+    width: 50vw;
+  }
+
+  .drink-info-wrapper {
+    padding: 54px;
+    display: flex;
+    flex-direction: column;
+    // width: 50vw;
+    h2 {
+      font-family: "Dream";
+      font-size: 6rem;
+      padding: 20px 0;
+      margin: 0;
+    }
+
+    h3 {
+      font-family: "Dream";
+      font-size: 2rem;
+    }
+
+    .headline-highlight {
+      color: #ff7f50;
+      font-size: 2rem;
+    }
+
+    ul {
+      margin: 0;
+      padding: 0 0px;
+      li {
+        color: #ff7f50;
+        font-family: "Poppins";
+        font-size: 0.8rem;
+        list-style: none;
+        display: flex;
+        padding: 0px;
+        margin: 8px 0;
+        justify-content: space-between;
+        border-bottom: dotted 2px #ff7f5080;
+      }
+    }
+
+    p {
+      font-family: "Poppins";
+      font-size: 0.8rem;
+      line-height: 1.8;
+      padding: 0;
+      margin: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .details {
+    grid-template-columns: repeat(1, 1fr);
+    img {
+      width: 100%;
+    }
+    .drink-info-wrapper {
+      h2 {
+        font-size: 4rem;
+      }
+      .zubereitung {
+        border: solid 1px #ff7f50;
+        padding: 16px;
+      }
+    }
+  }
+}
