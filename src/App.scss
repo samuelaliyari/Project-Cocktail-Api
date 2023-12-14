@@ -29,7 +29,7 @@ img {
 	--text-color: 255, 235, 205;
 	--brightness: 80%;
 	--bg: url(../../public/bgDark.jpg);
-	--slider: ;
+	--section: rgb(21, 21, 21);
 }
 
 html {
@@ -40,8 +40,9 @@ html {
 	--background: 255, 235, 205;
 	--text-color: 29, 29, 29;
 	--headline: 255, 127, 80;
-	--brightness: 80%;
+	--brightness: 140%;
 	--bg: url(../../public/bgLight.jpg);
+	--section: rgb(251, 228, 193);
 }
 
 .customOverlay {
