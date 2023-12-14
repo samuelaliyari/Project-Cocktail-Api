@@ -12,50 +12,39 @@ const Header = (props) => {
   return (
     <header className="header">
       <nav>
-        <img src={props.darkMode ? logolight : logodark} alt="" />
+        <Link to="/">
+          <img src={props.darkMode ? logolight : logodark} alt="" />
+        </Link>
         <div>
-          <div className="menu">
-            <p onClick={() => setActiv(!activ)}>MENU</p>
-            <ul className={activ ? "activ" : ""}>
-              <Link to="/newdrink">
-                <li>Add a new Drink</li>
-              </Link>
-              <Link>
-                <li>All Drinks</li>
-              </Link>
-              <li>
-                Cocktails mit:
-                <ul className={activ ? "activ" : ""}>
-                  <Link>
-                    <li>Gin</li>
-                  </Link>
-                  <Link>
-                    <li>Vodka</li>
-                  </Link>
-                  <Link>
-                    <li>Rum</li>
-                  </Link>
-                  <Link>
-                    <li>Scotch</li>
-                  </Link>
-                  <Link>
-                    <li>Alkoholfrei</li>
-                  </Link>
-                  <Link>
-                    <li>Zufall</li>
-                  </Link>
-                </ul>
-              </li>
-            </ul>
-          </div>
-
           <img onClick={props.onClick} src={props.darkMode ? sun : moon} />
         </div>
       </nav>
+
       <article>
         <h1>Cocktails & Getränke!</h1>
         <p>HERZLICH WILLKOMMEN IN DER WELT DER COCKTAILS UND GETRÄNKE!</p>
       </article>
+      <div className="slide">
+        <p
+          className={activ ? "activeMenu" : ""}
+          onClick={() => setActiv(!activ)}
+        >
+          MENU
+        </p>
+        <article className={activ ? "activ" : ""}>
+          <Link to="/gallery/alldata">All Drinks</Link>
+          <Link to="/newdrink">Add a new Drink</Link>
+          <h4>
+            Choose a Category <span>˘</span>
+          </h4>
+          <Link to="/gallery/gin">Gin</Link>
+          <Link to="/gallery/vodka">Vodka</Link>
+          <Link to="/gallery/rum">Rum</Link>
+          <Link to="/gallery/scotch">Scotch</Link>
+          <Link to="/gallery/nonalcoholic">Alkoholfrei</Link>
+          <Link to="/gallery/detail/random">Zufall</Link>
+        </article>
+      </div>
     </header>
   );
 };

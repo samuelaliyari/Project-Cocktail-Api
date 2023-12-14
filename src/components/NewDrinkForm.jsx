@@ -1,5 +1,6 @@
 import { useContext, useState } from "react";
 import { Data } from "../data/Data";
+import "./NewDrinkForm.scss";
 
 const NewDrinkForm = () => {
   const originalData = useContext(Data);
@@ -46,7 +47,7 @@ const NewDrinkForm = () => {
 
   console.log(originalData.data);
   return (
-    <form>
+    <form className="newDrinkForm">
       <input
         type="text"
         placeholder="Name"
@@ -156,7 +157,12 @@ const NewDrinkForm = () => {
         />
       </div>
 
-      <input type="button" value="Submit" onClick={addNewDrink} />
+      <input
+        className="submitButton"
+        type="button"
+        value="Submit"
+        onClick={addNewDrink}
+      />
     </form>
   );
 };
