@@ -3,7 +3,8 @@
 	position: fixed;
 	right: 0;
 	z-index: 6;
-	top: 10vh;
+	top: -1.4vh;
+	bottom: 0;
 	.slide {
 		position: absolute;
 		right: 0;
@@ -12,25 +13,28 @@
 		width: 50vw;
 		display: flex;
 		justify-content: end;
+		bottom: 0;
 
 		article {
-			background-color: rgba(0, 0, 0, 0.76);
+			background-color: rgba(0, 0, 0, 0.647);
 			width: 28vw;
-			height: 55.5vh;
+			height: 100%;
 			aspect-ratio: 1/1;
 			position: relative;
+			backdrop-filter: blur(12px);
 			top: 0;
+			bottom: 0;
 			right: -28vw;
 			transition: all 400ms ease-in-out;
 			text-align: right;
-			padding-block: 2vw;
-			padding-left: 8vw;
+			padding-block: 3vw;
+			padding-left: 6vw;
 			padding-right: 2vw;
 			font-family: Poppins;
 			display: flex;
 			flex-direction: column;
 			gap: 4%;
-			justify-content: center;
+			justify-content: start;
 
 			a {
 				color: rgb(var(--headline));
@@ -84,6 +88,7 @@
 			transition: all 400ms ease-in-out;
 			width: 12.5vh;
 			left: -6.25vh;
+			top: 23%;
 
 			text-align: center;
 		}
@@ -96,9 +101,9 @@
 			width: 60vw;
 			article {
 				width: 40vw;
-				height: 55.5vh;
+
 				right: -40.5vw;
-				padding-block: 2vw;
+				padding-block: 5vw;
 				padding-left: 8vw;
 				padding-right: 2vw;
 				background-color: rgba(0, 0, 0, 0.956);
