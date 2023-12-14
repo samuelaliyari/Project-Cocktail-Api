@@ -1,55 +1,55 @@
 @font-face {
-	font-family: "Dream";
-	src: url(./../fonts/Dream-Avenue.ttf);
+  font-family: "Dream";
+  src: url(./../fonts/Dream-Avenue.ttf);
 }
 
 @font-face {
-	font-family: "Poppins";
-	src: url(./../fonts/Poppins-Regular.ttf);
+  font-family: "Poppins";
+  src: url(./../fonts/Poppins-Regular.ttf);
 }
 
 * {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 a {
-	text-decoration: none;
-	color: inherit;
+  text-decoration: none;
+  color: inherit;
 }
 
 img {
-	display: block;
+  display: block;
 }
 
 :root {
-	--background: 29, 29, 29;
-	--headline: 255, 126, 79;
-	--text-color: 255, 235, 205;
-	--brightness: 80%;
-	--bg: url(../../public/bgDark.jpg);
-	--section: rgb(21, 21, 21);
+  --background: 29, 29, 29;
+  --headline: 255, 126, 79;
+  --text-color: 255, 235, 205;
+  --brightness: 80%;
+  --bg: url(../../public/bgDark.jpg);
+  --section: rgb(21, 21, 21);
 }
 
 html {
-	background-color: rgb(29, 29, 29);
+  background-color: rgb(29, 29, 29);
 }
 
 .lightMode {
-	--background: 255, 235, 205;
-	--text-color: 29, 29, 29;
-	--headline: 255, 127, 80;
-	--brightness: 140%;
-	--bg: url(../../public/bgLight.jpg);
-	--section: rgb(251, 228, 193);
+  --background: 255, 235, 205;
+  --text-color: 29, 29, 29;
+  --headline: 255, 127, 80;
+  --brightness: 140%;
+  --bg: url(../../public/bgLight.jpg);
+  --section: rgb(251, 228, 193);
 }
 
 .customOverlay {
-	background: rgba(36, 123, 160, 0.7);
+  background: rgba(36, 123, 160, 0.7);
 }
 .customModal {
-	background: #b2dbbf;
-	max-width: 500px;
-	width: 100%;
+  background: #b2dbbf;
+  max-width: 500px;
+  width: 100%;
 }

@@ -28,49 +28,77 @@ const Home = () => {
     <main>
       <SearchBar searchFunc={cocktailFilter} btnShow={true} />
       <section className="galleryHome">
-        <Link to={`/gallery/alldata`} className="linkAll">
+        <Link
+          to={`/gallery/alldata`}
+          className="linkAll"
+          onClick={() => window.scrollTo(0, 0)}
+        >
           <img src={cocktails} alt="Gin bottle" />
           <h2>Alle Cocktails</h2>
         </Link>
 
         <div className="gallery">
-          <Link to={`/gallery/gin`} className="linkFilter">
+          <Link
+            to={`/gallery/gin`}
+            className="linkFilter"
+            onClick={() => window.scrollTo(0, 0)}
+          >
             <h2>Gin</h2>
             <img
               src="https://www.thecocktaildb.com/images/ingredients/gin.png"
               alt="Gin bottle"
             />
           </Link>
-          <Link to={`/gallery/vodka`} className="linkFilter">
+          <Link
+            to={`/gallery/vodka`}
+            className="linkFilter"
+            onClick={() => window.scrollTo(0, 0)}
+          >
             <h2>Vodka</h2>
             <img
               src="https://www.thecocktaildb.com/images/ingredients/vodka.png"
               alt="Vodka bottle"
             />
           </Link>
-          <Link to={`/gallery/rum`} className="linkFilter">
+          <Link
+            to={`/gallery/rum`}
+            className="linkFilter"
+            onClick={() => window.scrollTo(0, 0)}
+          >
             <h2>Rum</h2>
             <img
               src="https://www.thecocktaildb.com/images/ingredients/rum.png"
               alt="Rum bottle"
             />
           </Link>
-          <Link to={`/gallery/scotch`} className="linkFilter">
+          <Link
+            to={`/gallery/scotch`}
+            className="linkFilter"
+            onClick={() => window.scrollTo(0, 0)}
+          >
             <h2>Scotch</h2>
             <img
               src="https://www.thecocktaildb.com/images/ingredients/scotch.png"
               alt="Scotch Bottle"
             />
           </Link>
-          <Link to={`/gallery/nonalcoholic`} className="linkFilter">
+          <Link
+            to={`/gallery/nonalcoholic`}
+            className="linkFilter"
+            onClick={() => window.scrollTo(0, 0)}
+          >
             <h2>Non Alcoholic</h2>
             <img
               src="https://www.thecocktaildb.com/images/ingredients/pineapple.png"
               alt="Softdrink"
             />
           </Link>
-          <Link to={`/detail/${randomId}`} className="linkFilter">
-            <h2>Lass dich überraschen</h2>
+          <Link
+            to={`/detail/${randomId}`}
+            className="linkFilter"
+            onClick={() => window.scrollTo(0, 0)}
+          >
+            <h2>Schicksal</h2>
             <img
               src="https://www.thecocktaildb.com/images/ingredients/ice.png"
               alt="Softdrink"

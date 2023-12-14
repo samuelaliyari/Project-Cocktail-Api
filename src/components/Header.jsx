@@ -19,7 +19,12 @@ const Header = (props) => {
 
       <article>
         <h1>Cocktails & Getränke!</h1>
-        <p>HERZLICH WILLKOMMEN IN DER WELT DER COCKTAILS UND GETRÄNKE!</p>
+
+        <p>
+          Herzlich willkommen in der faszinierenden Welt von Cocktails und
+          Erfrischungen!
+        </p>
+
       </article>
     </header>
   );

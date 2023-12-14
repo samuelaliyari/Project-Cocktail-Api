@@ -1,7 +1,7 @@
 .header {
-	padding: 5% 3.5%;
-	background-color: rgba(var(--background));
-	color: rgba(var(--text-color));
+  padding: 5% 3.5%;
+  background-color: rgba(var(--background));
+  color: rgba(var(--text-color));
 
 	nav {
 		display: flex;
@@ -20,33 +20,40 @@
 		backdrop-filter: blur(12px);
 		border-bottom: 1px solid rgb(var(--headline));
 
-		img {
-			width: 100px;
-			height: auto;
-		}
-		div {
-			display: flex;
-			gap: 2rem;
-			align-items: baseline;
 
-			img {
-				width: 24px;
-				height: 24px;
-			}
-		}
-	}
-	article {
-		margin-top: 8rem;
-		padding-inline: 3rem;
-		h1 {
-			font-size: 4.5rem;
-			color: rgb(var(--headline));
-			font-family: Dream;
-			font-weight: normal;
-		}
-		p {
-			color: rgb(var(--text-color));
-			font-family: Poppins;
-		}
-	}
+    img {
+      width: 100px;
+      height: auto;
+    }
+    div {
+      display: flex;
+      gap: 2rem;
+      align-items: baseline;
+
+      img {
+        width: 24px;
+        height: 24px;
+      }
+    }
+  }
+  article {
+    margin-top: 8rem;
+    padding-inline: 3rem;
+    h1 {
+      font-size: 4.5rem;
+      color: rgb(var(--headline));
+      font-family: Dream;
+      font-weight: normal;
+    }
+    p {
+      color: rgb(var(--text-color));
+      font-family: Poppins;
+    }
+  }
+}
+
+@media screen and (max-width: 850px) {
+  nav {
+    padding: 16px;
+  }
 }

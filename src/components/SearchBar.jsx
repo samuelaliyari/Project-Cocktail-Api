@@ -20,7 +20,7 @@ const SearchBar = ({ searchFunc, btnShow }) => {
       {btnShow ? (
         <input
           type="text"
-          placeholder="search..."
+          placeholder="Suche...."
           onClick={(e) => (e.target.value = "")}
           value={searchInput}
           onChange={handleInput}
@@ -31,7 +31,7 @@ const SearchBar = ({ searchFunc, btnShow }) => {
       ) : (
         <input
           type="text"
-          placeholder="search..."
+          placeholder="Suche..."
           value={searchInput}
           onChange={handleInputTwo}
         />

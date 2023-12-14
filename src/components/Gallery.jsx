@@ -234,8 +234,10 @@ const Gallery = () => {
 							<div className='link-button'>
 								<Link
 									to={`/detail/${itemData[0].idDrink}`}
-									className='primary-button'>
-									Mehr erfahren
+									onClick={() => window.scrollTo(0, 0)}>
+									<button className='primary-button'>
+										Mehr erfahren
+									</button>
 								</Link>
 							</div>
 						</div>
