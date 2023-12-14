@@ -1,21 +1,21 @@
 .sliderWrapper {
-	width: fit-content;
+	width: 5%;
 	position: fixed;
 	right: 0;
-	z-index: 6;
 	top: -1.4vh;
 	bottom: 0;
+	z-index: 2;
 
 	.slide {
 		position: absolute;
 		right: 0;
 		top: 11.2%;
-		overflow: hidden;
-		width: 35vw;
+		width: 5%;
 		display: flex;
 		justify-content: end;
 		flex: 1;
 		bottom: 0;
+		z-index: 0;
 
 		article {
 			background-color: rgba(0, 0, 0, 0.647);
@@ -37,6 +37,7 @@
 			flex-direction: column;
 			gap: 4%;
 			justify-content: start;
+			z-index: 5;
 
 			a {
 				color: rgb(var(--headline));
@@ -64,6 +65,7 @@
 		}
 		.activ {
 			right: -00%;
+			z-index: 9999;
 		}
 		.activeMenu {
 			right: 23.7%;
@@ -73,11 +75,12 @@
 			justify-content: center;
 			align-items: center;
 			transform: rotate(0);
+			z-index: 100;
 		}
 		p {
 			position: absolute;
 			text-align: center;
-			z-index: 4;
+			z-index: 1000;
 			transform: rotate(-90deg);
 			font-family: Poppins;
 			background-color: rgb(var(--text-color));
