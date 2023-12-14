@@ -70,7 +70,7 @@ const Home = () => {
             />
           </Link>
           <Link to={`/detail/${randomId}`} className="linkFilter">
-            <h2>Lass dich überraschen</h2>
+            <h2>Glücksmischer</h2>
             <img
               src="https://www.thecocktaildb.com/images/ingredients/ice.png"
               alt="Softdrink"

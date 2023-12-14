@@ -143,7 +143,11 @@ const Gallery = () => {
       <section>
         <div ref={myRef} />
         <Modal
-          classNames={{ modal: "modal", overlay: "modal-container" }}
+          classNames={{
+            modal: "modal",
+            overlay: "modal-container",
+            closeIcon: "modal-close",
+          }}
           open={open}
           onClose={onCloseModal}
           center
