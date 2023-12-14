@@ -7,7 +7,6 @@
 			background: transparent;
 			backdrop-filter: brightness(var(--brightness));
 			display: grid;
-
 			padding: 6%;
 			grid-template-columns: repeat(auto-fill, minmax(40vw, 1fr));
 			place-items: center;

@@ -1,0 +1,45 @@
+.newDrinkForm {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  margin-bottom: 5%;
+  select {
+    padding: 1rem 0.75rem;
+    border: 0.5px solid rgb(var(--text-color));
+    background-color: rgb(var(--background));
+    color: rgb(var(--text-color));
+    outline: none;
+    font-size: 1rem;
+    font-family: "Poppins";
+  }
+  input,
+  textarea {
+    padding: 1rem 1rem;
+    border: 0.5px solid rgb(var(--text-color));
+    background-color: rgb(var(--background));
+    color: rgb(var(--text-color));
+    outline: none;
+    font-size: 1rem;
+    font-family: "Poppins";
+  }
+  input::placeholder,
+  textarea::placeholder {
+    color: rgb(var(--text-color));
+    font-family: "Poppins";
+  }
+
+  div {
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
+  .submitButton {
+    background-color: rgb(var(--headline));
+    border: none;
+    color: #1d1d1d;
+    font-family: "Poppins";
+    font-size: 1rem;
+    font-weight: bold;
+    margin-top: 2rem;
+    border-radius: 50px;
+  }
+}
