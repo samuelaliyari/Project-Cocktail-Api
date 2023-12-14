@@ -7,7 +7,7 @@
     padding: 1rem 0.75rem;
     border: 0.5px solid rgb(var(--text-color));
     background-color: rgb(var(--background));
-    color: rgb(var(--text-color));
+    color: rgba(var(--text-color), 0.6);
     outline: none;
     font-size: 1rem;
     font-family: "Poppins";
@@ -24,7 +24,7 @@
   }
   input::placeholder,
   textarea::placeholder {
-    color: rgb(var(--text-color));
+    color: rgb(var(--text-color), 0.6);
     font-family: "Poppins";
   }
 

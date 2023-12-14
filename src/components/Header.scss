@@ -3,23 +3,22 @@
   background-color: rgba(var(--background));
   color: rgba(var(--text-color));
 
-	nav {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		font-size: 1rem;
-		font-weight: 700;
-		position: fixed;
-		padding: 2%;
-		height: 10vh;
-		top: 0;
-		right: 0;
-		left: 0;
-		z-index: 2;
-		background: transparent;
-		backdrop-filter: blur(12px);
-		border-bottom: 1px solid rgb(var(--headline));
-
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: 700;
+    position: fixed;
+    padding: 2%;
+    height: 10vh;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 2;
+    background: transparent;
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgb(var(--headline));
 
     img {
       width: 100px;
@@ -33,6 +32,7 @@
       img {
         width: 24px;
         height: 24px;
+        cursor: pointer;
       }
     }
   }
