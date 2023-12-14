@@ -5,9 +5,6 @@ import logodark from "../images/logodark.png";
 import logolight from "../images/logolight.png";
 import { Link } from "react-router-dom";
 
-import logolight from "../images/logolight.png";
-import logodark from "../images/logodark.png";
-
 const Header = (props) => {
   return (
     <header className="header">

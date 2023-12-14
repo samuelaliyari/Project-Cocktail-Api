@@ -43,6 +43,7 @@ const NewDrinkForm = () => {
     };
 
     originalData.setData([...originalData.data, newDrink]);
+    window.alert("Sie haben ein neues Getränk hinzugefügt");
   };
 
   console.log(originalData.data);
@@ -96,24 +97,24 @@ const NewDrinkForm = () => {
       <div>
         <input
           type="text"
-          placeholder="Zutat1"
+          placeholder="Zutat 1"
           onChange={(event) => setZutat1(event.target.value)}
         />
         <input
           type="text"
-          placeholder="Menge1"
+          placeholder="Menge 1"
           onChange={(event) => setMenge1(event.target.value)}
         />
       </div>
       <div>
         <input
           type="text"
-          placeholder="Zutat2"
+          placeholder="Zutat 2"
           onChange={(event) => setZutat2(event.target.value)}
         />
         <input
           type="text"
-          placeholder="Menge2"
+          placeholder="Menge 2"
           onChange={(event) => setMenge2(event.target.value)}
         />
       </div>
@@ -121,12 +122,12 @@ const NewDrinkForm = () => {
       <div>
         <input
           type="text"
-          placeholder="Zutat3"
+          placeholder="Zutat 3"
           onChange={(event) => setZutat3(event.target.value)}
         />
         <input
           type="text"
-          placeholder="Menge3"
+          placeholder="Menge 3"
           onChange={(event) => setMenge3(event.target.value)}
         />
       </div>
@@ -134,12 +135,12 @@ const NewDrinkForm = () => {
       <div>
         <input
           type="text"
-          placeholder="Zutat4"
+          placeholder="Zutat 4"
           onChange={(event) => setZutat4(event.target.value)}
         />
         <input
           type="text"
-          placeholder="Menge4"
+          placeholder="Menge 4"
           onChange={(event) => setMenge4(event.target.value)}
         />
       </div>
@@ -147,12 +148,12 @@ const NewDrinkForm = () => {
       <div>
         <input
           type="text"
-          placeholder="Zutat5"
+          placeholder="Zutat 5"
           onChange={(event) => setZutat5(event.target.value)}
         />
         <input
           type="text"
-          placeholder="Menge5"
+          placeholder="Menge 5"
           onChange={(event) => setMenge5(event.target.value)}
         />
       </div>
