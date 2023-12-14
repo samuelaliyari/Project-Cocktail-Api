@@ -4,7 +4,6 @@ import "./Slider.scss";
 
 const Slider = () => {
 	const [activ, setActiv] = useState(false);
-	console.log(activ);
 	return (
 		<section className='sliderWrapper'>
 			<div className='slide'>
@@ -14,8 +13,8 @@ const Slider = () => {
 						onClick={() => setActiv(!activ)}>
 						MENU
 					</p>
-					<Link to='/gallery/alldata'>All Drinks</Link>
-					<Link to='/newdrink'>Add a new Drink</Link>
+					<Link to='/gallery/alldata'>Alle Drinks</Link>
+					<Link to='/newdrink'>Add neue Drink</Link>
 					<h4>
 						Categories <span>˘</span>
 					</h4>

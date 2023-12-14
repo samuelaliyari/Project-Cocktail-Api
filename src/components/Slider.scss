@@ -5,14 +5,16 @@
 	z-index: 6;
 	top: -1.4vh;
 	bottom: 0;
+
 	.slide {
 		position: absolute;
 		right: 0;
 		top: 11.2%;
 		overflow: hidden;
-		width: 50vw;
+		width: 35vw;
 		display: flex;
 		justify-content: end;
+		flex: 1;
 		bottom: 0;
 
 		article {
@@ -98,7 +100,7 @@
 @media only screen and (max-width: 760px) {
 	.sliderWrapper {
 		.slide {
-			width: 60vw;
+			width: 52vw;
 			article {
 				width: 40vw;
 
