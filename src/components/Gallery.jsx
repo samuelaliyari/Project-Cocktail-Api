@@ -147,7 +147,12 @@ const Gallery = () => {
 			<section>
 				<div ref={myRef} />
 				<Modal
-					classNames={{ modal: "modal", overlay: "modal-container" }}
+					classNames={{
+						modal: "modal",
+						overlay: "modal-container",
+						closeIcon: "closeIcon",
+						root: "root",
+					}}
 					open={open}
 					onClose={onCloseModal}
 					center>
@@ -234,10 +239,9 @@ const Gallery = () => {
 							<div className='link-button'>
 								<Link
 									to={`/detail/${itemData[0].idDrink}`}
-									onClick={() => window.scrollTo(0, 0)}>
-									<button className='primary-button'>
-										Mehr erfahren
-									</button>
+									onClick={() => window.scrollTo(0, 0)}
+									className='primary-button'>
+									Mehr erfahren
 								</Link>
 							</div>
 						</div>

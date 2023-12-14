@@ -22,6 +22,9 @@ function App() {
 	const [data, setData] = useState(allCocktails);
 	console.log(data);
 
+	const randomIndex = Math.floor(Math.random() * 441);
+	const randomId = data[randomIndex].idDrink;
+
 	return (
 		<Data.Provider value={{ data, setData }}>
 			<section className={darkMode ? "darkMode" : "lightMode"}>
@@ -29,7 +32,7 @@ function App() {
 					onClick={changeMode}
 					darkMode={darkMode}
 				/>
-				<Slider />
+				<Slider randomId={randomId} />
 				<Routes>
 					<Route
 						path='/'
