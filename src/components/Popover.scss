@@ -1,152 +1,158 @@
 @font-face {
-  font-family: "Dream";
-  src: url(./../fonts/Dream-Avenue.ttf);
+	font-family: "Dream";
+	src: url(./../fonts/Dream-Avenue.ttf);
 }
 
 @font-face {
-  font-family: "Poppins";
-  src: url(./../fonts/Poppins-Regular.ttf);
+	font-family: "Poppins";
+	src: url(./../fonts/Poppins-Regular.ttf);
 }
 
 .modal {
-  background-color: green;
-  padding: 0px;
-  border-radius: 1rem;
-  margin: 0px;
-  max-width: 1200px;
+	background-color: green;
+	padding: 0px;
+	border-radius: 1rem;
+	margin: 0px;
+	max-width: 1200px;
 }
 
 .modal-container {
-  padding: 0;
-  background-color: #1d1d1db4;
-  backdrop-filter: blur(2px);
+	padding: 0;
+	background-color: #1d1d1db4;
+	backdrop-filter: blur(2px);
 }
 
 .popover {
-  width: 100%;
-  background-color: #1d1d1d;
-  color: blanchedalmond;
-  display: grid;
-  margin: 0;
-  padding: 0;
-  grid-template-columns: repeat(2, 1fr);
-  align-items: center;
+	width: 100%;
+	background-color: rgb(var(--background));
+	color: blanchedalmond;
+	display: grid;
+	margin: 0;
+	padding: 0;
+	grid-template-columns: repeat(2, 1fr);
+	align-items: center;
 
-  img {
-    margin: 64px auto;
-    width: 70%;
-    border-radius: 50%;
-    border: 2px solid #ff7f50;
-    border-left: 8px solid #ff7f50;
-  }
+	img {
+		margin: 64px auto;
+		width: 70%;
+		border-radius: 50%;
+		border: 2px solid #ff7f50;
+		border-left: 8px solid #ff7f50;
+	}
 
-  .drink-info-wrapper {
-    padding: 64px 64px 64px 0;
-    display: flex;
-    gap: 32px;
-    flex-direction: column;
+	.drink-info-wrapper {
+		padding: 64px 64px 64px 0;
+		display: flex;
+		gap: 32px;
+		flex-direction: column;
 
-    h2 {
-      font-family: "Dream";
-      font-size: 4rem;
-      padding: 20px 0;
-      margin: 0;
-      font-weight: normal;
-    }
+		h2 {
+			font-family: "Dream";
+			font-size: 4rem;
+			padding: 20px 0;
+			margin: 0;
+			font-weight: normal;
+		}
 
-    h3 {
-      font-family: "Dream";
-      font-size: 2rem;
-      padding-bottom: 24px;
-      font-weight: normal;
-    }
+		h3 {
+			font-family: "Dream";
+			font-size: 2rem;
+			padding-bottom: 24px;
+			font-weight: normal;
+		}
 
-    .headline-highlight {
-      color: #ff7f50;
-      font-size: 2rem;
-    }
+		.headline-highlight {
+			color: #ff7f50;
+			font-size: 2rem;
+		}
 
-    .ingredients-wrapper {
-      padding: 24px;
-      border: double 4px #a5583c;
+		.ingredients-wrapper {
+			padding: 24px;
+			border: double 4px #a5583c;
 
-      h3 {
-        font-family: "Dream";
-        font-size: 2rem;
-        color: #ff7f50;
-        font-weight: normal;
-      }
-    }
+			h3 {
+				font-family: "Dream";
+				font-size: 2rem;
+				color: #ff7f50;
+				font-weight: normal;
+			}
+		}
 
-    ul {
-      margin: 0;
-      padding: 0 0px;
-      li {
-        color: #ff7f50;
-        font-family: "Poppins";
-        font-size: 0.8rem;
-        list-style: none;
-        display: flex;
-        padding: 0px;
-        justify-content: space-between;
-      }
-    }
+		ul {
+			margin: 0;
+			padding: 0 0px;
+			li {
+				color: #ff7f50;
+				font-family: "Poppins";
+				font-size: 0.8rem;
+				list-style: none;
+				display: flex;
+				padding: 0px;
+				justify-content: space-between;
+			}
+		}
 
-    p {
-      font-family: "Poppins";
-      font-size: 1rem;
-      line-height: 1.8;
-      padding: 0;
-      margin: 0;
-    }
-  }
+		p {
+			font-family: "Poppins";
+			font-size: 1rem;
+			line-height: 1.8;
+			padding: 0;
+			margin: 0;
+		}
+	}
 }
 
 .link-button {
-  text-align: right;
+	text-align: right;
 }
 
 .primary-button {
-  background-color: #ff7f50;
-  border-radius: 50px;
-  padding: 16px 32px;
-  border: none;
-  color: #1d1d1d;
-  font-family: "Poppins";
-  font-size: 1rem;
-  font-weight: bold;
+	background-color: #ff7f50;
+	border-radius: 50px;
+	padding: 16px 32px;
+	border: none;
+	color: #1d1d1d;
+	font-family: "Poppins";
+	font-size: 1rem;
+	font-weight: bold;
+	&:focus {
+		outline: none;
+	}
+}
+.closeIcon {
+	color: #ff7f50;
 }
 
 @media screen and (max-width: 850px) {
-  .details {
-    grid-template-columns: repeat(1, 1fr);
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
+	.details {
+		grid-template-columns: repeat(1, 1fr);
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
 
-    .drink-info-wrapper {
-      gap: 54px;
-      h2 {
-        font-size: 4rem;
-      }
-      h3 {
-        font-size: 2.5rem;
-        line-height: 1.3;
-      }
-      p {
-        font-size: 1.3rem;
-      }
-      .ingredients-wrapper {
-        h3 {
-          font-size: 2.5rem;
-          line-height: 1.3;
-        }
-      }
-      .glass {
-        border: solid 1px #ff7f50;
-      }
-    }
-  }
+		.drink-info-wrapper {
+			gap: 54px;
+			h2 {
+				font-size: 4rem;
+			}
+			h3 {
+				font-size: 2.5rem;
+				line-height: 1.3;
+			}
+			p {
+				font-size: 1.3rem;
+			}
+			.ingredients-wrapper {
+				h3 {
+					font-size: 2.5rem;
+					line-height: 1.3;
+				}
+			}
+			.glass {
+				border: solid 1px #ff7f50;
+			}
+		}
+	}
 }
