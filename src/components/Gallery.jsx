@@ -230,7 +230,10 @@ const Gallery = () => {
                 <p className="glass">{itemData[0].strGlass}</p>
               </div> */}
               <div className="link-button">
-                <Link to={`/detail/${itemData[0].idDrink}`}>
+                <Link
+                  to={`/detail/${itemData[0].idDrink}`}
+                  onClick={() => window.scrollTo(0, 0)}
+                >
                   <button className="primary-button">Mehr erfahren</button>
                 </Link>
               </div>
