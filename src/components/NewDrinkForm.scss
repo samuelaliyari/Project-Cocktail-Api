@@ -7,10 +7,13 @@
     padding: 1rem 0.75rem;
     border: 0.5px solid rgb(var(--text-color));
     background-color: rgb(var(--background));
-    color: rgba(var(--text-color), 0.6);
+    color: rgba(var(--text-color));
     outline: none;
     font-size: 1rem;
     font-family: "Poppins";
+    &:invalid {
+      color: rgba(var(--text-color), 0.5);
+    }
   }
   input,
   textarea {
@@ -24,7 +27,7 @@
   }
   input::placeholder,
   textarea::placeholder {
-    color: rgb(var(--text-color), 0.6);
+    color: rgb(var(--text-color), 0.5);
     font-family: "Poppins";
   }
 

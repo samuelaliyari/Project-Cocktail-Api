@@ -28,7 +28,7 @@ const NewDrinkForm = () => {
       strDrink: name,
       strAlcoholic: alcoholic,
       strCategory: category,
-      strImageSource: imageURL,
+      strDrinkThumb: imageURL,
       strIngredient1: zutat1,
       strIngredient2: zutat2,
       strIngredient3: zutat3,
@@ -44,6 +44,7 @@ const NewDrinkForm = () => {
 
     originalData.setData([...originalData.data, newDrink]);
     window.alert("Sie haben ein neues Getränk hinzugefügt");
+    console.log(newDrink);
   };
 
   console.log(originalData.data);
@@ -55,11 +56,12 @@ const NewDrinkForm = () => {
         onChange={(event) => setName(event.target.value)}
       />
       <select
+        required
         name=""
         id=""
         onChange={(event) => setCategory(event.target.value)}
       >
-        <option value="">Categories</option>
+        <option value="">---categories---</option>
         <option value="Cocktail">Cocktail</option>
         <option value="Ordinary Drink">Ordinary Drink</option>
         <option value="Punch/Party Drink">Punch/Party Drink</option>
@@ -73,10 +75,12 @@ const NewDrinkForm = () => {
         <option value="Soft Drink">Soft Drink</option>
       </select>
       <select
+        required
         name=""
         id=""
         onChange={(event) => setAlcoholic(event.target.value)}
       >
+        <option value="">---alkohol---</option>
         <option value="alcoholic">Alkohol</option>
         <option value="non-alcoholic">Alkoholfrei</option>
       </select>
