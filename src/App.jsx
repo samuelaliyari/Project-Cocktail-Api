@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import "./App.scss";
 import { Data } from "./data/Data";
 import Home from "./pages/Home";
@@ -20,14 +20,21 @@ function App() {
 	};
 
 	const [data, setData] = useState(allCocktails);
-	console.log(data);
 
 	const randomIndex = Math.floor(Math.random() * 441);
 	const randomId = data[randomIndex].idDrink;
 
+	const [active, setActive] = useState(false);
+
+	const closeMenu = () => (active ? setActive(false) : null);
+
+	useEffect(() => {}, [active]);
+
 	return (
-		<Data.Provider value={{ data, setData }}>
-			<section className={darkMode ? "darkMode" : "lightMode"}>
+		<Data.Provider value={{ data, setData, active, setActive }}>
+			<section
+				className={darkMode ? "darkMode" : "lightMode"}
+				onClick={closeMenu}>
 				<Header
 					onClick={changeMode}
 					darkMode={darkMode}

@@ -8,7 +8,6 @@ import cocktails from "./../../public/cocktails.png";
 const Home = () => {
 	const navigate = useNavigate();
 	const { data, setData } = useContext(Data);
-	console.log(data);
 	const cocktailFilter = (searchInput) => {
 		const filtered = data.filter((cocktail) => {
 			return cocktail.strDrink

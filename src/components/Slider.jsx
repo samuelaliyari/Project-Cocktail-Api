@@ -1,23 +1,26 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import "./Slider.scss";
+import { Data } from "../data/Data";
 
 const Slider = ({ randomId }) => {
-	const [activ, setActiv] = useState(false);
+	const { active, setActive } = useContext(Data);
 	return (
 		<section
-			className={activ ? "activWrapper sliderWrapper" : "sliderWrapper"}>
+			className={
+				active ? "activeWrapper sliderWrapper" : "sliderWrapper"
+			}>
 			<div className='slide'>
-				<article className={activ ? "activ" : ""}>
+				<article className={active ? "active" : ""}>
 					<p
-						className={activ ? "activeMenu" : ""}
-						onClick={() => setActiv(!activ)}>
+						className={active ? "activeMenu" : ""}
+						onClick={() => setActive(!active)}>
 						MENU
 					</p>
 					<Link
 						to='/gallery/alldata'
 						onClick={() => window.scrollTo(0, 0)}>
-						Alle Drinks
+						All Drinks
 					</Link>
 					<Link
 						to='/newdrink'
@@ -28,27 +31,27 @@ const Slider = ({ randomId }) => {
 						Categories <span>˘</span>
 					</h4>
 					<Link
-						to='/gallery/gin'
+						to={`/gallery/gin`}
 						onClick={() => window.scrollTo(0, 0)}>
 						Gin
 					</Link>
 					<Link
-						to='/gallery/vodka'
+						to={`/gallery/vodka`}
 						onClick={() => window.scrollTo(0, 0)}>
 						Vodka
 					</Link>
 					<Link
-						to='/gallery/rum'
+						to={`/gallery/rum`}
 						onClick={() => window.scrollTo(0, 0)}>
 						Rum
 					</Link>
 					<Link
-						to='/gallery/scotch'
+						to={`/gallery/scotch`}
 						onClick={() => window.scrollTo(0, 0)}>
 						Scotch
 					</Link>
 					<Link
-						to='/gallery/nonalcoholic'
+						to={`/gallery/nonalcoholic`}
 						onClick={() => window.scrollTo(0, 0)}>
 						Alkoholfrei
 					</Link>
