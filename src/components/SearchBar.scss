@@ -1,22 +1,33 @@
 .searchbardiv {
-  width: 100%;
-  display: flex;
-  padding: 3% 7%;
-  background-color: rgb(var(--background));
-  input {
-    width: 45vh;
-    font-family: "Poppins";
-    font-size: 1.3rem;
-    background: transparent;
-    border: 2px solid rgb(var(--headline));
-    padding: 10px 12px;
-    border-radius: 0.7rem;
-    color: rgba(var(--text-color));
-    &::placeholder {
-      color: rgba(var(--text-color), 0.7);
-    }
-    &:focus {
-      outline: none;
-    }
-  }
+	width: 100%;
+	display: flex;
+	padding: 3% 7%;
+	background-color: rgba(var(--background), 0.9);
+
+	input {
+		width: 25vw;
+		font-family: "Poppins";
+		font-size: 1.3vw;
+		background: transparent;
+		border: 2px solid rgb(var(--headline));
+		padding: 10px 12px;
+		border-radius: 0.7rem;
+		color: rgba(var(--text-color));
+		&::placeholder {
+			color: rgba(var(--text-color), 0.7);
+		}
+		&:focus {
+			outline: none;
+		}
+	}
+}
+
+@media screen and (max-width: 850px) {
+	.searchbardiv {
+		input {
+			width: 80%;
+			margin: 0 auto;
+			font-size: 2vh;
+		}
+	}
 }
