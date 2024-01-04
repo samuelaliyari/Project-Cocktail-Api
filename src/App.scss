@@ -28,7 +28,7 @@ img {
 	--headline: 255, 126, 79;
 	--text-color: 255, 235, 205;
 	--brightness: 80%;
-	--bg: url(../../public/bgDark.jpg);
+	--bg: url(./bgDark.jpg);
 	--section: rgb(21, 21, 21);
 }
 
@@ -37,7 +37,7 @@ img {
 	--text-color: 29, 29, 29;
 	--headline: 255, 127, 80;
 	--brightness: 90%;
-	--bg: url(../../public/bgLight.jpg);
+	--bg: url(./bgLight.jpg);
 	--section: rgb(251, 228, 193);
 }
 
@@ -48,24 +48,4 @@ img {
 	background: #b2dbbf;
 	max-width: 500px;
 	width: 100%;
-}
-
-@media screen and (max-width: 850px) {
-	:root {
-		--background: 29, 29, 29;
-		--headline: 255, 126, 79;
-		--text-color: 255, 235, 205;
-		--brightness: 80%;
-		--bg: url(../../public/bgDark.jpg);
-		--section: rgb(21, 21, 21);
-	}
-
-	.lightMode {
-		--background: 255, 235, 205;
-		--text-color: 29, 29, 29;
-		--headline: 255, 127, 80;
-		--brightness: 90%;
-		--bg: url(../../public/bgLight.jpg);
-		--section: rgb(251, 228, 193);
-	}
 }
