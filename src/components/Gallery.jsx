@@ -11,7 +11,7 @@ import "./Popover.scss";
 import "./Gallery.scss";
 
 const Gallery = () => {
-	const { data, setData } = useContext(Data);
+	const { data, setData, darkMode } = useContext(Data);
 	const [filterData, setFilterdata] = useState([]);
 	const [allData, setAllData] = useState([]);
 	const category = useParams().category;
@@ -117,6 +117,8 @@ const Gallery = () => {
 		if (itemData.length !== 0) {
 		}
 	}, [itemData]);
+
+	useEffect(() => {}, [darkMode]);
 
 	const myRef = React.useRef(null);
 

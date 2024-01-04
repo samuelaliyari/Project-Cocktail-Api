@@ -10,6 +10,8 @@ import Gallery from "./components/Gallery";
 import NewDrink from "./pages/NewDrink";
 import "react-responsive-modal/styles.css";
 import Slider from "./components/Slider";
+import dark from "../public/bgDark.jpg";
+import light from "../public/bgLight.jpg";
 
 function App() {
 	// import all data and log in the Console
@@ -31,9 +33,14 @@ function App() {
 	useEffect(() => {}, [active]);
 
 	return (
-		<Data.Provider value={{ data, setData, active, setActive }}>
+		<Data.Provider value={{ data, setData, active, setActive, darkMode }}>
 			<section
 				className={darkMode ? "darkMode" : "lightMode"}
+				style={
+					darkMode
+						? { backgroundImage: dark }
+						: { backgroundImage: light }
+				}
 				onClick={closeMenu}>
 				<Header
 					onClick={changeMode}
